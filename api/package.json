@@ -1,0 +1,41 @@
+{
+  "name": "music-recommendation-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "M03 standalone Express API with SQLite music catalog search",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --import tsx --watch src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node --env-file-if-exists=.env dist/server.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "node --env-file-if-exists=.env node_modules/prisma/build/index.js generate --config prisma7.config.ts",
+    "db:migrate": "node --env-file-if-exists=.env --import tsx src/init-database.ts && node --env-file-if-exists=.env node_modules/prisma/build/index.js migrate dev --config prisma7.config.ts",
+    "db:deploy": "node --env-file-if-exists=.env --import tsx src/init-database.ts && node --env-file-if-exists=.env node_modules/prisma/build/index.js migrate deploy --config prisma7.config.ts",
+    "catalog:import": "node --env-file-if-exists=.env --import tsx src/catalog/import-cli.ts"
+  },
+  "dependencies": {
+    "@prisma/adapter-better-sqlite3": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "csv-parse": "7.0.3",
+    "express": "5.3.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "9.6.0",
+    "@types/express": "5.0.6",
+    "@types/node": "26.6.5",
+    "@types/supertest": "7.2.1",
+    "prisma": "7.10.1",
+    "supertest": "7.3.1",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5",
+    "yaml": "2.9.1"
+  }
+}

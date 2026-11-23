@@ -1,0 +1,8 @@
+{
+  "requestedPreset": "beEhfqy2",
+  "status": "unavailable",
+  "attemptedCliVersions": ["latest", "4.22.0"],
+  "reason": "Both official CLI attempts timed out connecting to ui.shadcn.com/init.",
+  "fallback": "Local accessible Base UI button wrapper; zinc/blue dark theme. Not an installed shadcn preset.",
+  "replacementPath": "Retry npx shadcn@latest init --preset beEhfqy2 when the official registry is reachable; review theme changes before replacing local UI wrappers."
+}

@@ -1,0 +1,334 @@
+openapi: 3.1.0
+info:
+  title: Music Recommendation API
+  version: 0.2.0
+  description: M03 SQLite catalog and literal song/artist-text search. Public
+    metadata only; no authentication, audio, or Python integration. Liveness
+    remains independent of database queries.
+servers:
+  - url: http://localhost:4000
+    description: Default local development server
+paths:
+  /api/v1/health/live:
+    get:
+      operationId: getLiveness
+      summary: Check whether the API process can respond
+      description: Does not test the database, Python service, or future readiness
+        dependencies.
+      responses:
+        "200":
+          description: The API process is alive
+          headers:
+            X-Request-Id:
+              $ref: "#/components/headers/RequestId"
+            Cache-Control:
+              schema:
+                type: string
+                const: no-store
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+        "400":
+          $ref: "#/components/responses/ErrorResponse"
+        "413":
+          $ref: "#/components/responses/ErrorResponse"
+        "415":
+          $ref: "#/components/responses/ErrorResponse"
+        "500":
+          $ref: "#/components/responses/ErrorResponse"
+  /api/v1/tracks:
+    get:
+      operationId: listTracks
+      summary: List published songs
+      description: "Both /tracks and /tracks/ are accepted. Stable order: normalized
+        title, then internal ID. Only page and limit are accepted;
+        unknown/repeated parameters are rejected."
+      parameters:
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Successful metadata response
+          headers:
+            X-Request-Id:
+              $ref: "#/components/headers/RequestId"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrackListResponse"
+        "400": &a1
+          $ref: "#/components/responses/ErrorResponse"
+        "500": *a1
+        "503": *a1
+  /api/v1/tracks/{id}:
+    get:
+      operationId: getTrack
+      summary: Get a published song by internal ID
+      parameters:
+        - $ref: "#/components/parameters/TrackId"
+      responses:
+        "200":
+          description: Successful metadata response
+          headers:
+            X-Request-Id:
+              $ref: "#/components/headers/RequestId"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrackDetailResponse"
+        "400": *a1
+        "404": *a1
+        "500": *a1
+        "503": *a1
+  /api/v1/search:
+    get:
+      operationId: searchTracks
+      summary: Search song titles or artist text
+      description: Literal substring matching; % and _ are ordinary characters.
+        English case-insensitive and Unicode NFC normalized. Returns the same
+        paginated track shape as /tracks. Does not query Python or an external
+        provider.
+      parameters:
+        - $ref: "#/components/parameters/Query"
+        - $ref: "#/components/parameters/SearchType"
+        - $ref: "#/components/parameters/Page"
+        - $ref: "#/components/parameters/Limit"
+      responses:
+        "200":
+          description: Successful metadata response
+          headers:
+            X-Request-Id:
+              $ref: "#/components/headers/RequestId"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TrackListResponse"
+        "400": *a1
+        "500": *a1
+        "503": *a1
+components:
+  headers:
+    RequestId:
+      description: Server-generated correlation ID; also present in JSON responses.
+      schema:
+        type: string
+        format: uuid
+  responses:
+    ErrorResponse:
+      description: Structured API error. Unknown routes/methods return 404 NOT_FOUND;
+        malformed JSON returns 400 INVALID_JSON; JSON over 16 KB returns 413
+        PAYLOAD_TOO_LARGE; unsupported JSON encoding returns 415
+        UNSUPPORTED_ENCODING; unexpected failures return 500 INTERNAL_ERROR.
+        Stack traces, request bodies, and private error details are never
+        returned. Invalid catalog parameters return 400 VALIDATION_ERROR.
+        Missing/archived tracks return 404 NOT_FOUND. An app constructed without
+        its database dependency returns 503 CATALOG_UNAVAILABLE. No query values
+        or database details are returned in errors.
+      headers:
+        X-Request-Id:
+          $ref: "#/components/headers/RequestId"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorEnvelope"
+  schemas:
+    HealthResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - data
+        - meta
+      properties:
+        data:
+          type: object
+          additionalProperties: false
+          required:
+            - status
+          properties:
+            status:
+              type: string
+              const: ok
+        meta: &a2
+          type: object
+          additionalProperties: false
+          required:
+            - requestId
+          properties:
+            requestId:
+              type: string
+              format: uuid
+    ErrorEnvelope:
+      type: object
+      additionalProperties: false
+      required:
+        - error
+      properties:
+        error:
+          type: object
+          additionalProperties: false
+          required:
+            - code
+            - messageKey
+            - message
+            - requestId
+          properties:
+            code:
+              type: string
+              examples:
+                - NOT_FOUND
+                - INVALID_JSON
+                - INTERNAL_ERROR
+            messageKey:
+              type: string
+              description: Stable translation key for future clients.
+            message:
+              type: string
+              description: Safe English fallback message.
+            requestId:
+              type: string
+              format: uuid
+    Track:
+      type: object
+      additionalProperties: false
+      required:
+        - id
+        - source
+        - sourceTrackId
+        - title
+        - artistsText
+        - albumName
+        - genre
+        - popularity
+        - durationMs
+        - explicit
+        - catalogVersion
+      properties:
+        id:
+          type: string
+        source:
+          type: string
+          examples:
+            - spotify-tracks
+        sourceTrackId:
+          type: string
+          description: Original track_id preserved for later Python interoperability.
+        title:
+          type: string
+        artistsText:
+          type: string
+        albumName:
+          type:
+            - string
+            - "null"
+        genre:
+          type: string
+        popularity:
+          type:
+            - integer
+            - "null"
+          minimum: 0
+          maximum: 100
+        durationMs:
+          type:
+            - integer
+            - "null"
+          minimum: 0
+        explicit:
+          type: boolean
+        catalogVersion:
+          type: string
+    Pagination:
+      type: object
+      additionalProperties: false
+      required:
+        - page
+        - limit
+        - total
+        - hasNext
+        - requestId
+      properties:
+        page:
+          type: integer
+          minimum: 1
+        limit:
+          type: integer
+          minimum: 1
+          maximum: 100
+        total:
+          type: integer
+          minimum: 0
+        hasNext:
+          type: boolean
+        requestId:
+          type: string
+          format: uuid
+    TrackListResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - data
+        - meta
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Track"
+        meta:
+          $ref: "#/components/schemas/Pagination"
+    TrackDetailResponse:
+      type: object
+      additionalProperties: false
+      required:
+        - data
+        - meta
+      properties:
+        data:
+          $ref: "#/components/schemas/Track"
+        meta: *a2
+  parameters:
+    Page:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 1000000
+        default: 1
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+    Query:
+      name: q
+      in: query
+      description: Literal substring, trimmed and NFC/lowercase normalized. Empty or
+        omitted returns catalog suggestions. Maximum 200 characters.
+      schema:
+        type: string
+        maxLength: 200
+        default: ""
+    SearchType:
+      name: type
+      in: query
+      description: track searches titles; artist searches artist text and still
+        returns track records.
+      schema:
+        type: string
+        enum:
+          - track
+          - artist
+        default: track
+    TrackId:
+      name: id
+      in: path
+      required: true
+      description: Internal Track.id from a list/search response, not the original
+        sourceTrackId.
+      schema:
+        type: string
+        pattern: ^[A-Za-z0-9_-]{1,100}$

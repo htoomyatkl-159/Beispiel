@@ -1,0 +1,47 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  moduleFormat        = "esm"
+  importFileExtension = "js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model CatalogImport {
+  catalogVersion  String   @id
+  source          String
+  sourceChecksum  String
+  exportChecksum  String
+  cleaningVersion String
+  modelVersion    String
+  rowCount        Int
+  importedAt      DateTime @default(now())
+  isActive        Boolean  @default(false)
+  tracks          Track[]
+}
+
+model Track {
+  id             String        @id @default(cuid())
+  source         String
+  sourceTrackId  String
+  title          String
+  artistsText    String
+  albumName      String?
+  genre          String
+  popularity     Int?
+  durationMs     Int?
+  explicit       Boolean
+  status         String        @default("PUBLISHED")
+  catalogVersion String
+  searchTitle    String
+  searchArtists  String
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  catalogImport  CatalogImport @relation(fields: [catalogVersion], references: [catalogVersion], onDelete: Restrict)
+
+  @@unique([source, sourceTrackId])
+  @@index([status, searchTitle, id])
+  @@index([catalogVersion])
+}

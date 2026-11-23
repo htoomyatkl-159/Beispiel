@@ -1,0 +1,314 @@
+{
+  "milestone": "M00",
+  "sourceHashes": {
+    "dataset": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+    "script": "639bc3d21b10f4988a6defd1819d99e7896a0c28f367a513d549101bf4bc8ece"
+  },
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "python-dateutil": "2.9.0.post0",
+    "six": "1.17.0",
+    "tzdata": "2026.5",
+    "cloudpickle": "3.1.2",
+    "narwhals": "2.26.0"
+  },
+  "pythonVersion": [
+    3,
+    14,
+    7
+  ],
+  "featureOrder": [
+    "danceability",
+    "energy",
+    "acousticness",
+    "instrumentalness",
+    "valence",
+    "speechiness",
+    "tempo",
+    "loudness"
+  ],
+  "cleanedRows": 89740,
+  "method": "observe byte-identical copied legacy CLI; retain original [1:] behavior",
+  "examples": [
+    {
+      "query": "Comedy",
+      "choice": 1,
+      "trackId": "5SuOikwiRyPMVoIQDJUgSV",
+      "title": "Comedy",
+      "artists": "Gen Hoshino",
+      "recommendations": [
+        {
+          "trackId": "6dFOwtd9iBMERardJvsIxY",
+          "title": "She's Royal",
+          "artists": "Tarrus Riley",
+          "genre": "dancehall",
+          "cosineDistance": 0.025746037962018575,
+          "cosineSimilarity": 0.9742539620379814,
+          "displaySimilarityPercent": 97.42539620379814
+        },
+        {
+          "trackId": "6hDBkm6B8HF9B4oATW28YN",
+          "title": "Pop Virus",
+          "artists": "Gen Hoshino",
+          "genre": "acoustic",
+          "cosineDistance": 0.031415637597033697,
+          "cosineSimilarity": 0.9685843624029663,
+          "displaySimilarityPercent": 96.85843624029663
+        },
+        {
+          "trackId": "54LGxQGf5LPXNGjtzDZ5IE",
+          "title": "So Good (feat. Ty Dolla $ign)",
+          "artists": "Zara Larsson;Ty Dolla $ign",
+          "genre": "swedish",
+          "cosineDistance": 0.04073226149691367,
+          "cosineSimilarity": 0.9592677385030863,
+          "displaySimilarityPercent": 95.92677385030863
+        },
+        {
+          "trackId": "0TA2eTf6ADQMuYLB0Ciy2V",
+          "title": "我們的歌",
+          "artists": "Leehom Wang",
+          "genre": "mandopop",
+          "cosineDistance": 0.04957131268448434,
+          "cosineSimilarity": 0.9504286873155157,
+          "displaySimilarityPercent": 95.04286873155156
+        },
+        {
+          "trackId": "4E0GiSMs5E60MvX3pLW70H",
+          "title": "The Git Up",
+          "artists": "Mini Pop Kids",
+          "genre": "kids",
+          "cosineDistance": 0.050116148883466716,
+          "cosineSimilarity": 0.9498838511165333,
+          "displaySimilarityPercent": 94.98838511165333
+        }
+      ],
+      "transcript": "Loading music dataset...\nSongs available: 89740\nPreparing musical features...\nBuilding recommendation model...\n\nMusic recommendation system is ready!\n\nMatching songs:\n1. Comedy - Gen Hoshino\n2. The Best Comedy I've Ever Seen - Patton Oswalt\n3. Accidental Soccer Coach - Dry Bar Comedy\n4. Old People's Music - Dry Bar Comedy\n\n==================================================\nYOUR MUSIC RECOMMENDATIONS\n==================================================\nSelected song: Comedy\nArtist: Gen Hoshino\n\nFive similar songs:\n\n1. She's Royal\n   Artist: Tarrus Riley\n   Genre: dancehall\n   Feature similarity: 97.4%\n\n2. Pop Virus\n   Artist: Gen Hoshino\n   Genre: acoustic\n   Feature similarity: 96.9%\n\n3. So Good (feat. Ty Dolla $ign)\n   Artist: Zara Larsson;Ty Dolla $ign\n   Genre: swedish\n   Feature similarity: 95.9%\n\n4. 我們的歌\n   Artist: Leehom Wang\n   Genre: mandopop\n   Feature similarity: 95.0%\n\n5. The Git Up\n   Artist: Mini Pop Kids\n   Genre: kids\n   Feature similarity: 95.0%\n\nRecommendation process completed!\n"
+    },
+    {
+      "query": "Jireh (My Provider)",
+      "choice": 1,
+      "trackId": "4pR4oQJULf7FDB54TleMyH",
+      "title": "Jireh (My Provider)",
+      "artists": "Limoblaze;Lecrae;Happi",
+      "recommendations": [
+        {
+          "trackId": "3VD9CH4sCoy9IkhIuTKxXh",
+          "title": "Finale: Bikini Bottom Day Reprise",
+          "artists": "Company of SpongeBob SquarePants, The New Musical",
+          "genre": "show-tunes",
+          "cosineDistance": 0.0239657741689272,
+          "cosineSimilarity": 0.9760342258310728,
+          "displaySimilarityPercent": 97.60342258310727
+        },
+        {
+          "trackId": "3QtHTf3nCvBNGikAMynXso",
+          "title": "Give Me Love - Janbaaz / Soundtrack Version",
+          "artists": "Miriam Stockley",
+          "genre": "new-age",
+          "cosineDistance": 0.028413136831407337,
+          "cosineSimilarity": 0.9715868631685927,
+          "displaySimilarityPercent": 97.15868631685926
+        },
+        {
+          "trackId": "5AyL2kgLtTWEu3qO3B9SqK",
+          "title": "Like A G6",
+          "artists": "Far East Movement;The Cataracs;DEV",
+          "genre": "edm",
+          "cosineDistance": 0.035976872714680086,
+          "cosineSimilarity": 0.9640231272853199,
+          "displaySimilarityPercent": 96.402312728532
+        },
+        {
+          "trackId": "00LmM2QLGpfb5NC7PC7qqZ",
+          "title": "Vasilhame",
+          "artists": "Criolo",
+          "genre": "afrobeat",
+          "cosineDistance": 0.03723880821873493,
+          "cosineSimilarity": 0.9627611917812651,
+          "displaySimilarityPercent": 96.2761191781265
+        },
+        {
+          "trackId": "6ku3i5WNrsY3qhOq6ua9TL",
+          "title": "Vem Dancar Kuduro",
+          "artists": "Lucenzo;Big Ali",
+          "genre": "french",
+          "cosineDistance": 0.04556858277631082,
+          "cosineSimilarity": 0.9544314172236892,
+          "displaySimilarityPercent": 95.44314172236892
+        }
+      ],
+      "transcript": "Loading music dataset...\nSongs available: 89740\nPreparing musical features...\nBuilding recommendation model...\n\nMusic recommendation system is ready!\n\nMatching songs:\n1. Jireh (My Provider) - Limoblaze;Lecrae;Happi\n\n==================================================\nYOUR MUSIC RECOMMENDATIONS\n==================================================\nSelected song: Jireh (My Provider)\nArtist: Limoblaze;Lecrae;Happi\n\nFive similar songs:\n\n1. Finale: Bikini Bottom Day Reprise\n   Artist: Company of SpongeBob SquarePants, The New Musical\n   Genre: show-tunes\n   Feature similarity: 97.6%\n\n2. Give Me Love - Janbaaz / Soundtrack Version\n   Artist: Miriam Stockley\n   Genre: new-age\n   Feature similarity: 97.2%\n\n3. Like A G6\n   Artist: Far East Movement;The Cataracs;DEV\n   Genre: edm\n   Feature similarity: 96.4%\n\n4. Vasilhame\n   Artist: Criolo\n   Genre: afrobeat\n   Feature similarity: 96.3%\n\n5. Vem Dancar Kuduro\n   Artist: Lucenzo;Big Ali\n   Genre: french\n   Feature similarity: 95.4%\n\nRecommendation process completed!\n"
+    },
+    {
+      "query": "Toast",
+      "choice": 4,
+      "trackId": "7sd72KZS8D59g5NmhxyHpJ",
+      "title": "Toast",
+      "artists": "Koffee",
+      "recommendations": [
+        {
+          "trackId": "34PgtxJfjfPBZvpoigpQxl",
+          "title": "Play Tune (So so So) [Clubbing Extended]",
+          "artists": "Macka Diamond",
+          "genre": "dancehall",
+          "cosineDistance": 0.005507076277540213,
+          "cosineSimilarity": 0.9944929237224598,
+          "displaySimilarityPercent": 99.44929237224598
+        },
+        {
+          "trackId": "2qPNdVlqZl1cYqsNc3MXnA",
+          "title": "Sher Aaya Sher",
+          "artists": "DIVINE;Major C",
+          "genre": "hip-hop",
+          "cosineDistance": 0.005716368009664796,
+          "cosineSimilarity": 0.9942836319903352,
+          "displaySimilarityPercent": 99.42836319903353
+        },
+        {
+          "trackId": "5JsvjL3K6evbrybb49X7SQ",
+          "title": "Cool It (No Saints Remix)",
+          "artists": "Spice;Epik Jones;No Saints",
+          "genre": "dancehall",
+          "cosineDistance": 0.006495918669502498,
+          "cosineSimilarity": 0.9935040813304975,
+          "displaySimilarityPercent": 99.35040813304975
+        },
+        {
+          "trackId": "0r0F6NEGEI6JFGfhtWLSYC",
+          "title": "Weed Smokers",
+          "artists": "Vybz Kartel",
+          "genre": "dancehall",
+          "cosineDistance": 0.007893310367231288,
+          "cosineSimilarity": 0.9921066896327687,
+          "displaySimilarityPercent": 99.21066896327687
+        },
+        {
+          "trackId": "3yzkKgMeqMQjZl5BU40qC7",
+          "title": "Severlá - Otto y los Sarcófagos del Ritmo",
+          "artists": "31 Minutos",
+          "genre": "ska",
+          "cosineDistance": 0.00965732428733257,
+          "cosineSimilarity": 0.9903426757126674,
+          "displaySimilarityPercent": 99.03426757126674
+        }
+      ],
+      "transcript": "Loading music dataset...\nSongs available: 89740\nPreparing musical features...\nBuilding recommendation model...\n\nMusic recommendation system is ready!\n\nMatching songs:\n1. On & On - Beans on Toast\n2. Restless - Evil Nine;Toastie Taylor\n3. Toast - DJ LILMAN;West End Tricks\n4. Toast - Koffee\n5. A Toast to Momma Rose - Omar S\n6. Joy of Little Things - When Chai Met Toast\n7. Yellow Paper Daisy - When Chai Met Toast\n8. Khoj (Passing By) - When Chai Met Toast\n9. Firefly - When Chai Met Toast\n10. When We Feel Young - When Chai Met Toast\n\n==================================================\nYOUR MUSIC RECOMMENDATIONS\n==================================================\nSelected song: Toast\nArtist: Koffee\n\nFive similar songs:\n\n1. Play Tune (So so So) [Clubbing Extended]\n   Artist: Macka Diamond\n   Genre: dancehall\n   Feature similarity: 99.4%\n\n2. Sher Aaya Sher\n   Artist: DIVINE;Major C\n   Genre: hip-hop\n   Feature similarity: 99.4%\n\n3. Cool It (No Saints Remix)\n   Artist: Spice;Epik Jones;No Saints\n   Genre: dancehall\n   Feature similarity: 99.4%\n\n4. Weed Smokers\n   Artist: Vybz Kartel\n   Genre: dancehall\n   Feature similarity: 99.2%\n\n5. Severlá - Otto y los Sarcófagos del Ritmo\n   Artist: 31 Minutos\n   Genre: ska\n   Feature similarity: 99.0%\n\nRecommendation process completed!\n"
+    },
+    {
+      "query": "Raise the Game",
+      "choice": 1,
+      "trackId": "7AuiZ7HPqzqqwRU6jVdgxd",
+      "title": "Raise the Game",
+      "artists": "U.D.O.",
+      "recommendations": [
+        {
+          "trackId": "5TTl4ZXPtUnaMs767ADxHD",
+          "title": "Too Drunk To Fuck",
+          "artists": "The Klingonz",
+          "genre": "psych-rock",
+          "cosineDistance": 0.009628950002641856,
+          "cosineSimilarity": 0.9903710499973581,
+          "displaySimilarityPercent": 99.03710499973582
+        },
+        {
+          "trackId": "5CK7ifWXLxF6ntrpyUHTND",
+          "title": "Redes",
+          "artists": "Rowek",
+          "genre": "heavy-metal",
+          "cosineDistance": 0.010340013215139221,
+          "cosineSimilarity": 0.9896599867848608,
+          "displaySimilarityPercent": 98.96599867848607
+        },
+        {
+          "trackId": "7cRR82VFtvy3FeqIrjEeFy",
+          "title": "All My Own Stunts",
+          "artists": "Arctic Monkeys",
+          "genre": "garage",
+          "cosineDistance": 0.010384360236968426,
+          "cosineSimilarity": 0.9896156397630316,
+          "displaySimilarityPercent": 98.96156397630315
+        },
+        {
+          "trackId": "2kMKGatUipXyDa5uRDsdVu",
+          "title": "Volviendo a Casa",
+          "artists": "Rata Blanca",
+          "genre": "heavy-metal",
+          "cosineDistance": 0.011317779026671637,
+          "cosineSimilarity": 0.9886822209733284,
+          "displaySimilarityPercent": 98.86822209733283
+        },
+        {
+          "trackId": "3PSPdEN6YwLdLTnOVcuFLT",
+          "title": "Shake That! - Remastered",
+          "artists": "Scooter",
+          "genre": "happy",
+          "cosineDistance": 0.012177073182138232,
+          "cosineSimilarity": 0.9878229268178618,
+          "displaySimilarityPercent": 98.78229268178617
+        }
+      ],
+      "transcript": "Loading music dataset...\nSongs available: 89740\nPreparing musical features...\nBuilding recommendation model...\n\nMusic recommendation system is ready!\n\nMatching songs:\n1. Raise the Game - U.D.O.\n\n==================================================\nYOUR MUSIC RECOMMENDATIONS\n==================================================\nSelected song: Raise the Game\nArtist: U.D.O.\n\nFive similar songs:\n\n1. Too Drunk To Fuck\n   Artist: The Klingonz\n   Genre: psych-rock\n   Feature similarity: 99.0%\n\n2. Redes\n   Artist: Rowek\n   Genre: heavy-metal\n   Feature similarity: 99.0%\n\n3. All My Own Stunts\n   Artist: Arctic Monkeys\n   Genre: garage\n   Feature similarity: 99.0%\n\n4. Volviendo a Casa\n   Artist: Rata Blanca\n   Genre: heavy-metal\n   Feature similarity: 98.9%\n\n5. Shake That! - Remastered\n   Artist: Scooter\n   Genre: happy\n   Feature similarity: 98.8%\n\nRecommendation process completed!\n"
+    },
+    {
+      "query": "Neugeborene Schlafhilfe",
+      "choice": 1,
+      "trackId": "3IVQzOYO8JG9Lj41pq98Pf",
+      "title": "Neugeborene Schlafhilfe",
+      "artists": "Weißes Rauschen HD",
+      "recommendations": [
+        {
+          "trackId": "3hDMlXKXTUfGhsJ5OgLjcd",
+          "title": "Ich muss jetzt schlafen",
+          "artists": "Weißes Rauschen HD",
+          "genre": "sleep",
+          "cosineDistance": 0.00018485085469555074,
+          "cosineSimilarity": 0.9998151491453044,
+          "displaySimilarityPercent": 99.98151491453045
+        },
+        {
+          "trackId": "4TZh9HGsgaH3qzX40TPsF3",
+          "title": "Wenn Baby nicht schläft",
+          "artists": "Weißes Rauschen HD",
+          "genre": "sleep",
+          "cosineDistance": 0.0029959350196736567,
+          "cosineSimilarity": 0.9970040649803263,
+          "displaySimilarityPercent": 99.70040649803263
+        },
+        {
+          "trackId": "3guM77UfyggID9e6epTkBL",
+          "title": "Natur eigene Schlafmaschine",
+          "artists": "Weißes Rauschen HD",
+          "genre": "sleep",
+          "cosineDistance": 0.005815857806634295,
+          "cosineSimilarity": 0.9941841421933657,
+          "displaySimilarityPercent": 99.41841421933657
+        },
+        {
+          "trackId": "7aobMbEFBMR9BuQOHWLdMi",
+          "title": "Brown Noise with Binaural Beats - Theta - Loopable with No Fade",
+          "artists": "Sleep Baby Sleep;White Noise Meditation;Delta Don and Theta Mind Cream;Soothing White Noise for Relaxation;Binaural Beats",
+          "genre": "sleep",
+          "cosineDistance": 0.011351325512926613,
+          "cosineSimilarity": 0.9886486744870734,
+          "displaySimilarityPercent": 98.86486744870734
+        },
+        {
+          "trackId": "5oeF42L73APoIognQDfqsS",
+          "title": "Qualitätsschlaf",
+          "artists": "Weißes Rauschen HD",
+          "genre": "sleep",
+          "cosineDistance": 0.015539816878407109,
+          "cosineSimilarity": 0.9844601831215929,
+          "displaySimilarityPercent": 98.44601831215928
+        }
+      ],
+      "transcript": "Loading music dataset...\nSongs available: 89740\nPreparing musical features...\nBuilding recommendation model...\n\nMusic recommendation system is ready!\n\nMatching songs:\n1. Neugeborene Schlafhilfe - Weißes Rauschen HD\n\n==================================================\nYOUR MUSIC RECOMMENDATIONS\n==================================================\nSelected song: Neugeborene Schlafhilfe\nArtist: Weißes Rauschen HD\n\nFive similar songs:\n\n1. Ich muss jetzt schlafen\n   Artist: Weißes Rauschen HD\n   Genre: sleep\n   Feature similarity: 100.0%\n\n2. Wenn Baby nicht schläft\n   Artist: Weißes Rauschen HD\n   Genre: sleep\n   Feature similarity: 99.7%\n\n3. Natur eigene Schlafmaschine\n   Artist: Weißes Rauschen HD\n   Genre: sleep\n   Feature similarity: 99.4%\n\n4. Brown Noise with Binaural Beats - Theta - Loopable with No Fade\n   Artist: Sleep Baby Sleep;White Noise Meditation;Delta Don and Theta Mind Cream;Soothing White Noise for Relaxation;Binaural Beats\n   Genre: sleep\n   Feature similarity: 98.9%\n\n5. Qualitätsschlaf\n   Artist: Weißes Rauschen HD\n   Genre: sleep\n   Feature similarity: 98.4%\n\nRecommendation process completed!\n"
+    }
+  ]
+}

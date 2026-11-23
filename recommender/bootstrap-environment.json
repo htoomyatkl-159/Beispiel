@@ -1,0 +1,79 @@
+{
+  "method": "offline copy of installed distribution files; not a PyPI wheel install",
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "baseExecutable": "C:\\Python314\\python.exe",
+  "targetExecutable": "D:\\music_recommendation_app\\recommender\\.venv\\Scripts\\python.exe",
+  "requirementsSha256": "785872f340b083df744727fe93c4fc7b1aa5d3f239e59ea6e55f150c79d57078",
+  "packages": [
+    {
+      "name": "numpy",
+      "version": "2.5.3",
+      "files": 946,
+      "skippedConsoleWrappers": [
+        "../Scripts/f2py.exe",
+        "../Scripts/numpy-config.exe"
+      ]
+    },
+    {
+      "name": "pandas",
+      "version": "3.0.6",
+      "files": 1570,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.1",
+      "files": 1079,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1",
+      "files": 1537,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0",
+      "files": 142,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.7.0",
+      "files": 6,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "files": 26,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "files": 7,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.5",
+      "files": 634,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2",
+      "files": 8,
+      "skippedConsoleWrappers": []
+    },
+    {
+      "name": "narwhals",
+      "version": "2.26.0",
+      "files": 168,
+      "skippedConsoleWrappers": []
+    }
+  ],
+  "limitation": "Same Python/Windows architecture only. Console entry wrappers are not copied; use python -m commands."
+}

@@ -1,0 +1,42 @@
+{
+  "formatVersion": 1,
+  "profile": "tiny",
+  "modelVersion": "cosine-v1-26cae89bdf34991fa167",
+  "catalogVersion": "catalog-v1-5b375897bac1e8f6dfa2",
+  "sourceSha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+  "rowCount": 40,
+  "orderedIdsSha256": "860a41e5b7c13b3e777527691996673fcc4d9c723b8cde468afba9dbc368c064",
+  "cleaningVersion": "legacy-dropna-then-first-id-v1",
+  "catalogSha256": "ba3327d3c28518c7cc15457d2dbcbcfda64e15b721b517df4d29108581ef6a53",
+  "engineVersion": "legacy-scaled-cosine-id-exclusion-v1",
+  "featureOrder": [
+    "danceability",
+    "energy",
+    "acousticness",
+    "instrumentalness",
+    "valence",
+    "speechiness",
+    "tempo",
+    "loudness"
+  ],
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "narwhals": "2.26.0",
+    "cloudpickle": "3.1.2"
+  },
+  "pythonVersion": "3.14.7",
+  "legacyScriptSha256": "639bc3d21b10f4988a6defd1819d99e7896a0c28f367a513d549101bf4bc8ece",
+  "files": {
+    "catalog.csv": "ba3327d3c28518c7cc15457d2dbcbcfda64e15b721b517df4d29108581ef6a53",
+    "features.npy": "9d9b297766004b7a7e2a196287741d3c4a3a3ec9b8b0024a3b9aa4c3ecf888ca",
+    "ids.json": "7c7451ad21d1db673a5d188d3e70e8713202ecc4e9a1f3696d34a98c96e975d6",
+    "model.joblib": "4afc8f4c88522713600a6c7e9420066209a8502bc5f72f6ecf1d10f37f83a7d4"
+  },
+  "tiePolicy": "Retain scikit-learn neighbor order; exclude seed by source ID. Versions are pinned.",
+  "trust": "Local generated artifacts only; checksums are not signatures."
+}

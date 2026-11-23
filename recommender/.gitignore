@@ -1,0 +1,14 @@
+.venv/
+.tmp/
+.pip-cache/
+__pycache__/
+*.pyc
+data/
+
+# Exclude generated artifacts except the tiny development snapshot
+artifacts/*
+!artifacts/tiny/
+artifacts/tiny/*
+!artifacts/tiny/current.json
+!artifacts/tiny/cosine-v1-*/
+artifacts/tiny/cosine-v1-*/*

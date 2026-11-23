@@ -1,0 +1,57 @@
+{
+  "milestone": "M01",
+  "profiles": {
+    "tiny": {
+      "rowCount": 40,
+      "matrixShape": [
+        40,
+        8
+      ],
+      "catalogVersion": "catalog-v1-5b375897bac1e8f6dfa2",
+      "modelVersion": "cosine-v1-26cae89bdf34991fa167",
+      "directory": "D:\\music_recommendation_app\\recommender\\artifacts\\tiny\\cosine-v1-26cae89bdf34991fa167",
+      "payloadBytes": 13987,
+      "loadedQueryCount": 5
+    },
+    "development": {
+      "rowCount": 1000,
+      "matrixShape": [
+        1000,
+        8
+      ],
+      "catalogVersion": "catalog-v1-53825408c571ad061db0",
+      "modelVersion": "cosine-v1-a2403503a8510ab22a47",
+      "directory": "D:\\music_recommendation_app\\recommender\\artifacts\\development\\cosine-v1-a2403503a8510ab22a47",
+      "payloadBytes": 267073,
+      "loadedQueryCount": 5
+    },
+    "full": {
+      "rowCount": 89740,
+      "matrixShape": [
+        89740,
+        8
+      ],
+      "catalogVersion": "catalog-v1-01ef9aed6c2a818f8216",
+      "modelVersion": "cosine-v1-a22f3c88bc47d2d62c9c",
+      "directory": "D:\\music_recommendation_app\\recommender\\artifacts\\full\\cosine-v1-a22f3c88bc47d2d62c9c",
+      "payloadBytes": 23658481,
+      "loadedQueryCount": 5
+    }
+  },
+  "sourceProjectUnchanged": true,
+  "originalFileCount": 8,
+  "approvedDocumentsUnchanged": true,
+  "m00FixtureUnchanged": true,
+  "laterMilestoneDirectoriesPresent": [],
+  "rootGitExists": false,
+  "testingTooling": "unittest; pytest installer returned no available distribution",
+  "tests": {
+    "runner": "unittest",
+    "combinedPassed": 25,
+    "combinedFailed": 0,
+    "combinedSeconds": 152.361,
+    "m01Checks": 16,
+    "m00RegressionChecks": 9,
+    "dependencyCheck": "No broken requirements found"
+  }
+}

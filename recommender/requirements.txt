@@ -1,0 +1,17 @@
+# M00 runtime pins, reused unchanged for M01; no new runtime dependency is needed.
+# Python 3.14.7, Windows x64. No API/service dependencies in this milestone.
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+scipy==1.18.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+python-dateutil==2.9.0.post0
+six==1.17.0
+tzdata==2026.5
+cloudpickle==3.1.2
+narwhals==2.26.0
+fastapi==0.162.0
+uvicorn==0.54.0
+pydantic==2.14.3
+httpx==0.28.1

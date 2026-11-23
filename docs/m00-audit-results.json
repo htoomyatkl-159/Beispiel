@@ -1,0 +1,193 @@
+{
+  "milestone": "M00",
+  "generatedAtUtc": "2026-11-05T15:46:54.805438+00:00",
+  "sourceHashes": {
+    "dataset": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+    "script": "639bc3d21b10f4988a6defd1819d99e7896a0c28f367a513d549101bf4bc8ece"
+  },
+  "originalProject": "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender",
+  "python": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\music_recommendation_app\\recommender\\.venv\\Scripts\\python.exe",
+  "isolatedEnvironment": true,
+  "packages": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0",
+    "python-dateutil": "2.9.0.post0",
+    "six": "1.17.0",
+    "tzdata": "2026.5",
+    "cloudpickle": "3.1.2",
+    "narwhals": "2.26.0"
+  },
+  "approvedDocuments": {
+    "SPEC.md": "3b964d62090f9839bcf32931d08645e0e5c14b8a1ba60a1b21e3d5c5f22bf7e3",
+    "ROADMAP.md": "ac5a062881083545c4664b1253cb017201975542328adc4714169fb584d6844f"
+  },
+  "dataset": {
+    "rawRows": 114000,
+    "columnCount": 21,
+    "columns": [
+      "Unnamed: 0",
+      "track_id",
+      "artists",
+      "album_name",
+      "track_name",
+      "popularity",
+      "duration_ms",
+      "explicit",
+      "danceability",
+      "energy",
+      "key",
+      "loudness",
+      "mode",
+      "speechiness",
+      "acousticness",
+      "instrumentalness",
+      "liveness",
+      "valence",
+      "tempo",
+      "time_signature",
+      "track_genre"
+    ],
+    "rawUniqueTrackIds": 89741,
+    "missingTitleOrArtistRows": 1,
+    "duplicateIdsRemovedAfterMissingNames": 24259,
+    "cleanedRows": 89740,
+    "cleanedUniqueTrackIds": 89740,
+    "cleanedEmptyTrackIds": 0,
+    "cleanedWhitespaceOnlyNames": 0,
+    "cleanedInvalidFeatureRows": 0,
+    "retainedGenres": 113,
+    "featureOrder": [
+      "danceability",
+      "energy",
+      "acousticness",
+      "instrumentalness",
+      "valence",
+      "speechiness",
+      "tempo",
+      "loudness"
+    ]
+  },
+  "baseline": {
+    "mode": "verified",
+    "examples": 5,
+    "neighborsPerExample": 5,
+    "fixtureSha256": "4866f3f24654dc74fc775e1207d0f2ad26d880edb8870d9afd2514a49642c00c"
+  },
+  "status": "passed",
+  "sourcePreservation": {
+    "unchanged": true,
+    "before": {
+      "data/": {
+        "kind": "directory"
+      },
+      "data/dataset.csv": {
+        "sha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+        "bytes": 20118244,
+        "modifiedNs": 1792431625514174000
+      },
+      "data/Music-pattern-Analysis-main/": {
+        "kind": "directory"
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/": {
+        "kind": "directory"
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/dataset.csv": {
+        "sha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+        "bytes": 20118244,
+        "modifiedNs": 1792421446285963700
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/LICENSE": {
+        "sha256": "74c8a0a416024469eaa0a98a19607ae8cff58cb543b6477295c1c5cb6f46fa62",
+        "bytes": 1069,
+        "modifiedNs": 1792421446133945500
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/music_pattern_analysis.ipynb": {
+        "sha256": "4903164e223558c9137e4a5117faa2968e5231e241fbc953aee2bd66cdbee3bb",
+        "bytes": 689611,
+        "modifiedNs": 1792421446296964000
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/music_pattern_dashboard.html": {
+        "sha256": "95ec6d25914b17b88bb3f650e0dd16937eb256c410d32a457bd3db0d1819afe1",
+        "bytes": 325891,
+        "modifiedNs": 1792421446302964200
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/README.md": {
+        "sha256": "6f12b977a2918fa2a548ae99a90c2af0b328e478249d2b55d69935fa826652fe",
+        "bytes": 2471,
+        "modifiedNs": 1792421446138945300
+      },
+      "src/": {
+        "kind": "directory"
+      },
+      "src/inspect_data.py": {
+        "sha256": "6e5df27bb04563bc3ef0756407fda5659a43b34e88dd37096f13f236daad5451",
+        "bytes": 441,
+        "modifiedNs": 1792421676203328700
+      },
+      "src/recommend.py": {
+        "sha256": "639bc3d21b10f4988a6defd1819d99e7896a0c28f367a513d549101bf4bc8ece",
+        "bytes": 4374,
+        "modifiedNs": 1792674530482351400
+      }
+    },
+    "after": {
+      "data/": {
+        "kind": "directory"
+      },
+      "data/dataset.csv": {
+        "sha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+        "bytes": 20118244,
+        "modifiedNs": 1792431625514174000
+      },
+      "data/Music-pattern-Analysis-main/": {
+        "kind": "directory"
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/": {
+        "kind": "directory"
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/dataset.csv": {
+        "sha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+        "bytes": 20118244,
+        "modifiedNs": 1792421446285963700
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/LICENSE": {
+        "sha256": "74c8a0a416024469eaa0a98a19607ae8cff58cb543b6477295c1c5cb6f46fa62",
+        "bytes": 1069,
+        "modifiedNs": 1792421446133945500
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/music_pattern_analysis.ipynb": {
+        "sha256": "4903164e223558c9137e4a5117faa2968e5231e241fbc953aee2bd66cdbee3bb",
+        "bytes": 689611,
+        "modifiedNs": 1792421446296964000
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/music_pattern_dashboard.html": {
+        "sha256": "95ec6d25914b17b88bb3f650e0dd16937eb256c410d32a457bd3db0d1819afe1",
+        "bytes": 325891,
+        "modifiedNs": 1792421446302964200
+      },
+      "data/Music-pattern-Analysis-main/Music-pattern-Analysis-main/README.md": {
+        "sha256": "6f12b977a2918fa2a548ae99a90c2af0b328e478249d2b55d69935fa826652fe",
+        "bytes": 2471,
+        "modifiedNs": 1792421446138945300
+      },
+      "src/": {
+        "kind": "directory"
+      },
+      "src/inspect_data.py": {
+        "sha256": "6e5df27bb04563bc3ef0756407fda5659a43b34e88dd37096f13f236daad5451",
+        "bytes": 441,
+        "modifiedNs": 1792421676203328700
+      },
+      "src/recommend.py": {
+        "sha256": "639bc3d21b10f4988a6defd1819d99e7896a0c28f367a513d549101bf4bc8ece",
+        "bytes": 4374,
+        "modifiedNs": 1792674530482351400
+      }
+    }
+  }
+}

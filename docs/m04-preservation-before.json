@@ -1,0 +1,370 @@
+{
+  "D:\\music_recommendation_app\\SPEC.md": {
+    "sha256": "3b964d62090f9839bcf32931d08645e0e5c14b8a1ba60a1b21e3d5c5f22bf7e3",
+    "size": 45181
+  },
+  "D:\\music_recommendation_app\\ROADMAP.md": {
+    "sha256": "ac5a062881083545c4664b1253cb017201975542328adc4714169fb584d6844f",
+    "size": 41161
+  },
+  "D:\\music_recommendation_app\\recommender\\.gitignore": {
+    "sha256": "700c97ceb02897d21b8d2883686950f5a7d504e605de9ecd25a0e8ba6a8d1057",
+    "size": 61
+  },
+  "D:\\music_recommendation_app\\recommender\\bootstrap-environment.json": {
+    "sha256": "1566f7a0c762a1539c22a5f4df41396d6043c384341e1c8ca116bcdf0414183c",
+    "size": 2045
+  },
+  "D:\\music_recommendation_app\\recommender\\README.md": {
+    "sha256": "351f040601dff39a0758ab828d5532d5984d870619df28c7d82052d126ce00cb",
+    "size": 14355
+  },
+  "D:\\music_recommendation_app\\recommender\\requirements.txt": {
+    "sha256": "780b66a20231a18f7cf0e658ec3c43d81182835a6c1cc598df5ae359aaa77a6e",
+    "size": 348
+  },
+  "D:\\music_recommendation_app\\recommender\\data\\dataset.csv": {
+    "sha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+    "size": 20118244
+  },
+  "D:\\music_recommendation_app\\recommender\\engine\\artifacts.py": {
+    "sha256": "bf91a6b5efdede127030e7dfa3a1e70b3a6a48117e31d881e39e96bc70a1e942",
+    "size": 8653
+  },
+  "D:\\music_recommendation_app\\recommender\\engine\\baseline.py": {
+    "sha256": "d81f4c4b7fe79538df61ab77d7ebe86e4845dbaf2ec6bca41f8e7b53cef5023e",
+    "size": 3174
+  },
+  "D:\\music_recommendation_app\\recommender\\engine\\cli.py": {
+    "sha256": "985a3e6f79a1b316a8e30fb4019c4da14e9c64e4f6855a8409840f57594ef28e",
+    "size": 2801
+  },
+  "D:\\music_recommendation_app\\recommender\\engine\\dataset.py": {
+    "sha256": "d47d464bb746686432a5ce6395f9ad9d0acd639461eccbe4de69cea7b1b8f165",
+    "size": 2915
+  },
+  "D:\\music_recommendation_app\\recommender\\engine\\__init__.py": {
+    "sha256": "19c75ab592f5030fc15c7bcd4b15c7618d6ad18793b70f89a57cfb23277de19e",
+    "size": 226
+  },
+  "D:\\music_recommendation_app\\recommender\\legacy\\README.md": {
+    "sha256": "339bc80bda1e9fd323b2dfdea9f186e3fda1cc1a68f7769781c34a3fb7e815e6",
+    "size": 691
+  },
+  "D:\\music_recommendation_app\\recommender\\legacy\\recommend.py": {
+    "sha256": "639bc3d21b10f4988a6defd1819d99e7896a0c28f367a513d549101bf4bc8ece",
+    "size": 4374
+  },
+  "D:\\music_recommendation_app\\recommender\\scripts\\audit_dataset.py": {
+    "sha256": "c65b8e0b5ac413e2956e7d6c42fd60c9d70eeccfff0864026dddb4370d83bf9f",
+    "size": 14227
+  },
+  "D:\\music_recommendation_app\\recommender\\scripts\\bootstrap_environment.py": {
+    "sha256": "5cc5712920c459f82afb927a9db839fe00510ee7bb91bbaa9b4518d474b05c7b",
+    "size": 4210
+  },
+  "D:\\music_recommendation_app\\recommender\\tests\\test_baseline.py": {
+    "sha256": "7ddb19354e4f101e9163e3304562fcb6c9a80ab40423b53bbe5047af6ebbe83c",
+    "size": 7817
+  },
+  "D:\\music_recommendation_app\\recommender\\tests\\test_dataset.py": {
+    "sha256": "9e2061019d444a3d16232ec0974ec01b3645ce82ac0b591aecb1c979f5c03cf8",
+    "size": 3164
+  },
+  "D:\\music_recommendation_app\\recommender\\tests\\test_m00.py": {
+    "sha256": "57ce49a52f030bf41438f93fe6e585efbc72829ec11a02c351d2a32decf34254",
+    "size": 6470
+  },
+  "D:\\music_recommendation_app\\recommender\\tests\\fixtures\\baseline.json": {
+    "sha256": "4866f3f24654dc74fc775e1207d0f2ad26d880edb8870d9afd2514a49642c00c",
+    "size": 16501
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\development\\current.json": {
+    "sha256": "9f2ac1b9cfac55838299d18343dde065ccaea5b9d6a6e6ee0e516ffc1a6c48f4",
+    "size": 114
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\full\\current.json": {
+    "sha256": "ca12c0e682b6d68f44475757a0b307acd37fde8c1a1c14171d2e6fc1d4761cf4",
+    "size": 114
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\tiny\\current.json": {
+    "sha256": "dc1ef11ded56a64c9ba8a588b701756aca2e046f1f895faf4705217cc6f9ff90",
+    "size": 114
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\tiny\\cosine-v1-26cae89bdf34991fa167\\catalog.csv": {
+    "sha256": "ba3327d3c28518c7cc15457d2dbcbcfda64e15b721b517df4d29108581ef6a53",
+    "size": 4431
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\tiny\\cosine-v1-26cae89bdf34991fa167\\features.npy": {
+    "sha256": "9d9b297766004b7a7e2a196287741d3c4a3a3ec9b8b0024a3b9aa4c3ecf888ca",
+    "size": 2688
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\tiny\\cosine-v1-26cae89bdf34991fa167\\ids.json": {
+    "sha256": "7c7451ad21d1db673a5d188d3e70e8713202ecc4e9a1f3696d34a98c96e975d6",
+    "size": 1165
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\tiny\\cosine-v1-26cae89bdf34991fa167\\manifest.json": {
+    "sha256": "b10f6717d3158d5a8657d231df312f4244fa4db14a8dc31d08d1cd95a3022bfe",
+    "size": 1642
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\tiny\\cosine-v1-26cae89bdf34991fa167\\model.joblib": {
+    "sha256": "4afc8f4c88522713600a6c7e9420066209a8502bc5f72f6ecf1d10f37f83a7d4",
+    "size": 4061
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\full\\cosine-v1-a22f3c88bc47d2d62c9c\\catalog.csv": {
+    "sha256": "b0aaa1607a9242b68979eea4533cea8f8384c184d67c4fa4704027e1d9b9b8f1",
+    "size": 9566019
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\full\\cosine-v1-a22f3c88bc47d2d62c9c\\features.npy": {
+    "sha256": "93344e955a055e6775f06f5c2fbff6b8123bf4d85a2863b17ef844d00656f8cd",
+    "size": 5743488
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\full\\cosine-v1-a22f3c88bc47d2d62c9c\\ids.json": {
+    "sha256": "1ac4a5e3c9f52baa925f6c03e6066c8c5f69109a2a76b9cbd520fa2d149f49cf",
+    "size": 2602465
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\full\\cosine-v1-a22f3c88bc47d2d62c9c\\manifest.json": {
+    "sha256": "2fdb39538f598b40a18574376b69f1ca531a1accbfb5a0f57c8dcf9964bff2e0",
+    "size": 1645
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\full\\cosine-v1-a22f3c88bc47d2d62c9c\\model.joblib": {
+    "sha256": "92c73396a56392c131d899d99329dade7ad5efb36e078ebe9d6a2adc7c6fb17d",
+    "size": 5744864
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\development\\cosine-v1-a2403503a8510ab22a47\\catalog.csv": {
+    "sha256": "ef924832dd4a36676ad67664363f451dbfd6b57557733083aa3885c37a6d1fbc",
+    "size": 106787
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\development\\cosine-v1-a2403503a8510ab22a47\\features.npy": {
+    "sha256": "65a1e099dfbb22a3c3fd15b517c916a9328a2bcddd363f26ef3f83c7da9fa506",
+    "size": 64128
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\development\\cosine-v1-a2403503a8510ab22a47\\ids.json": {
+    "sha256": "ae7f9e0d16800ce3d64f2a74934ed9a196e252fbeaa123d12cffa70b77c70244",
+    "size": 29005
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\development\\cosine-v1-a2403503a8510ab22a47\\manifest.json": {
+    "sha256": "f47d191a2f2c2fcd68a5bc300700082d7aa47c05a107afeb6c196bc4e1d63bbc",
+    "size": 1651
+  },
+  "D:\\music_recommendation_app\\recommender\\artifacts\\development\\cosine-v1-a2403503a8510ab22a47\\model.joblib": {
+    "sha256": "2278354da8a1cc93fe9fdcf3083b812fc86b331ccf5c86094bd36a7508c6707d",
+    "size": 65502
+  },
+  "D:\\music_recommendation_app\\api\\.env": {
+    "sha256": "9e3a44168faf85cb4ac91e2f948f45ae766a7ccb98dd558f46c91a885dd22624",
+    "size": 284
+  },
+  "D:\\music_recommendation_app\\api\\.env.example": {
+    "sha256": "2f3d22c60de1ea0ab62e2f1eb87a38561e503f2f052bf91e30e77ccd3a7abb6f",
+    "size": 345
+  },
+  "D:\\music_recommendation_app\\api\\.gitignore": {
+    "sha256": "1dd8a8659278751edb19af20a3c39895ec3ccb3607bd4a96f910fcfd908748cd",
+    "size": 121
+  },
+  "D:\\music_recommendation_app\\api\\openapi.yaml": {
+    "sha256": "0ff1df161e9e2069974c4daf8498cdbf333e8e70b1386db427bb42ef1fe68cda",
+    "size": 9283
+  },
+  "D:\\music_recommendation_app\\api\\package-lock.json": {
+    "sha256": "a8e677cda6e7f4faf08d3eedaa8bc5f83a426a35d4a48d5294f366780136607d",
+    "size": 185331
+  },
+  "D:\\music_recommendation_app\\api\\package.json": {
+    "sha256": "be9df67d5febedefbf8ec9135cd5a75ec991f079ab1e9e9a0f3c4f99af71012f",
+    "size": 1618
+  },
+  "D:\\music_recommendation_app\\api\\prisma7.config.ts": {
+    "sha256": "3747459712e0e0d22dc2adb450aab46004adc7423b756d966869671b20bd3206",
+    "size": 265
+  },
+  "D:\\music_recommendation_app\\api\\README.md": {
+    "sha256": "b00b223fa184900c517c7fb817e3d60fc481859a9cc993a58ed66e5bf43ccc04",
+    "size": 13655
+  },
+  "D:\\music_recommendation_app\\api\\tsconfig.build.json": {
+    "sha256": "3e2227950f3b4b47a6df2d4a71a181b8a62673e61a06621bb377299a401733d3",
+    "size": 203
+  },
+  "D:\\music_recommendation_app\\api\\tsconfig.json": {
+    "sha256": "ba62c9b598501d8f7517d10883b29a337a29eca97200299af0c82ca6abeccc2b",
+    "size": 400
+  },
+  "D:\\music_recommendation_app\\api\\vitest.config.ts": {
+    "sha256": "160b6fda9353bbb14828e1416bc358b5c819b792a6782a5adf1e3b7b0f977e93",
+    "size": 204
+  },
+  "D:\\music_recommendation_app\\api\\prisma\\dev.db": {
+    "sha256": "712895bb04bfa77c2ea4d45cdf705e5d7b877855bebb06c08ca3aaf5c18f0242",
+    "size": 53248
+  },
+  "D:\\music_recommendation_app\\api\\prisma\\schema.prisma": {
+    "sha256": "be49538be79ea081e5b2804b7369fcb3f72e658369e3fbde479bc3fbe8859a49",
+    "size": 1242
+  },
+  "D:\\music_recommendation_app\\api\\src\\app.ts": {
+    "sha256": "3282c0366418d34a2b3c2f7f1b02ae1236626c70204a261863f9c8cd08f9abfd",
+    "size": 912
+  },
+  "D:\\music_recommendation_app\\api\\src\\config.ts": {
+    "sha256": "c2703c6f57273b3305d7c325ab0d9752c78270bbe0ebeb7ab533dc66d1a99656",
+    "size": 1019
+  },
+  "D:\\music_recommendation_app\\api\\src\\database-url.ts": {
+    "sha256": "788c61afe6638e380a0ae79682282a1e0eedc1416e3d02bf11a387ac723c8b8a",
+    "size": 1100
+  },
+  "D:\\music_recommendation_app\\api\\src\\db.ts": {
+    "sha256": "bdae294a5014d248a57e2ac2bffae92f1f1188ca0ce443d700f632ddcd69f8ee",
+    "size": 719
+  },
+  "D:\\music_recommendation_app\\api\\src\\init-database.ts": {
+    "sha256": "49f352ff11974983a89530c4a030cad5cbeaf7b407d1d37b37debfa50f93313c",
+    "size": 330
+  },
+  "D:\\music_recommendation_app\\api\\src\\server.ts": {
+    "sha256": "28cbc0408d1d363461c32ea6543da95e181e6aabec42008993855d90b9b49767",
+    "size": 1392
+  },
+  "D:\\music_recommendation_app\\api\\tests\\catalog.test.ts": {
+    "sha256": "5a4de575baff6cbb4adc29c45cbd1c6949783dac3577136e267df9305e1cfc7a",
+    "size": 12262
+  },
+  "D:\\music_recommendation_app\\api\\tests\\config.test.ts": {
+    "sha256": "0a847c911f1e5ce58a19225fe4c2506799c55e39066a4dad7e52ec5dc0bbed19",
+    "size": 1025
+  },
+  "D:\\music_recommendation_app\\api\\tests\\database-url.test.ts": {
+    "sha256": "f502a4ccdcb80ea2d3fb82895f9414cdb941ca0ba1b6d83468503fac0ea448bc",
+    "size": 965
+  },
+  "D:\\music_recommendation_app\\api\\tests\\errors.test.ts": {
+    "sha256": "a29dcd1c9a9b1c74f3c0f53d2d1ae2f7f1d9d10a79217513330a55b38cf276d8",
+    "size": 2122
+  },
+  "D:\\music_recommendation_app\\api\\tests\\health.test.ts": {
+    "sha256": "c04d60d5b9139a4f27571d24999532a6960dfa407b28aa9afeffa35aa70847a6",
+    "size": 3180
+  },
+  "D:\\music_recommendation_app\\api\\tests\\openapi.test.ts": {
+    "sha256": "cd3ecfee6c2feff0a464379e158ecaef3e812d7cf795545b0af84d9f3d2b02df",
+    "size": 1403
+  },
+  "D:\\music_recommendation_app\\api\\tests\\fixtures\\tiny\\catalog.csv": {
+    "sha256": "ba3327d3c28518c7cc15457d2dbcbcfda64e15b721b517df4d29108581ef6a53",
+    "size": 4431
+  },
+  "D:\\music_recommendation_app\\api\\tests\\fixtures\\tiny\\manifest.json": {
+    "sha256": "b10f6717d3158d5a8657d231df312f4244fa4db14a8dc31d08d1cd95a3022bfe",
+    "size": 1642
+  },
+  "D:\\music_recommendation_app\\api\\src\\catalog\\import-cli.ts": {
+    "sha256": "c6e6e2908a34af7aaf80db1b8ece3211dfaff95ab57efc46cb847dd202b28d30",
+    "size": 672
+  },
+  "D:\\music_recommendation_app\\api\\src\\catalog\\import.ts": {
+    "sha256": "63d1ea61bf7c43b14850873d1688f9b53449db54d02ceece48c175bd1889342e",
+    "size": 5931
+  },
+  "D:\\music_recommendation_app\\api\\src\\catalog\\routes.ts": {
+    "sha256": "a567b6cdccaf3d96a30d759824d6a148a15dd0abc5db136e2c91d28f1d5a01a2",
+    "size": 1207
+  },
+  "D:\\music_recommendation_app\\api\\src\\catalog\\service.ts": {
+    "sha256": "7495432ce5a1e3030438346674977f510f0653800ebd84c3ef2c9554db04662c",
+    "size": 2100
+  },
+  "D:\\music_recommendation_app\\api\\src\\catalog\\validation.ts": {
+    "sha256": "db7d47753966a0723d45286c9082aa789702a2f27dff6bfa8b2f6c81d46c6e84",
+    "size": 1465
+  },
+  "D:\\music_recommendation_app\\api\\src\\middleware\\errors.ts": {
+    "sha256": "9dcf5d9eb9a848e8cd11ff1c70bfaba3dff88f2a5cc5e5e3535c70a956b91535",
+    "size": 2479
+  },
+  "D:\\music_recommendation_app\\api\\src\\middleware\\request-context.ts": {
+    "sha256": "edad9ade9862e6ac6b0d6dc2a6728a585390e06281e69f656d729faeafb73d1c",
+    "size": 419
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\browser.ts": {
+    "sha256": "a2fb4b886eea75d28e76bc00688442b65912638c8d4d8b2630efaa9777a927ae",
+    "size": 844
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\client.ts": {
+    "sha256": "73a4096b6f836b691054239e449efdb0c9b2415790c23814bccbd3be18a28f75",
+    "size": 1825
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\commonInputTypes.ts": {
+    "sha256": "3250db4949d3ae619540dfb2da521efcc485db0851e7a03fcdda36e3f03b1f12",
+    "size": 15556
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\enums.ts": {
+    "sha256": "ebbdce75bbdd503c5172913fdc7b0523216ce8a6e6ed3ee4611ab10bea9c1e20",
+    "size": 336
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\models.ts": {
+    "sha256": "e7ee50455a76c2fae820812b6014d61b31ee6dd6f4285fd022e214bd3c360606",
+    "size": 402
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\internal\\class.ts": {
+    "sha256": "bf66dd3505d5322d8027588c28f9c864c2608483b1a08e8e6ec3a63d8ba959f1",
+    "size": 19634
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\internal\\prismaNamespace.ts": {
+    "sha256": "ac2463b98a3f850b1ad3c535225505d88e9e72e7cbf424731c1e6341750f4c11",
+    "size": 26944
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\internal\\prismaNamespaceBrowser.ts": {
+    "sha256": "d6e0200b35b3c08e0223886ccc3b313e2ee22fa148804ae18de3db0dcb993d85",
+    "size": 3655
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\models\\CatalogImport.ts": {
+    "sha256": "58f9e539910d98bea3ceaf9f1b610b009c4303a14f5d36e7fd1df067f12f202a",
+    "size": 56391
+  },
+  "D:\\music_recommendation_app\\api\\src\\generated\\prisma\\models\\Track.ts": {
+    "sha256": "819f1bdca5defe9e5628367ea86ddbb45f2fbcd72546c09c7ffb2ddb75b03a77",
+    "size": 64760
+  },
+  "D:\\music_recommendation_app\\api\\prisma\\migrations\\migration_lock.toml": {
+    "sha256": "3389dbaf2a3cf4b413275867ac6f550b27f79efe85ee9c12082cdd8c5b8239c4",
+    "size": 124
+  },
+  "D:\\music_recommendation_app\\api\\prisma\\migrations\\20261029074257_init_catalog\\migration.sql": {
+    "sha256": "b41be040b1339874c30124cee72e490022e70bc9dea74c89f709b38c2ea7c5e2",
+    "size": 1449
+  },
+  "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender\\data\\dataset.csv": {
+    "sha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+    "size": 20118244
+  },
+  "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender\\src\\inspect_data.py": {
+    "sha256": "6e5df27bb04563bc3ef0756407fda5659a43b34e88dd37096f13f236daad5451",
+    "size": 441
+  },
+  "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender\\src\\recommend.py": {
+    "sha256": "639bc3d21b10f4988a6defd1819d99e7896a0c28f367a513d549101bf4bc8ece",
+    "size": 4374
+  },
+  "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender\\data\\Music-pattern-Analysis-main\\Music-pattern-Analysis-main\\dataset.csv": {
+    "sha256": "b202fa49909b2d5cef71a04b1d21243cfeb36414535f2ca9272aa646721177bd",
+    "size": 20118244
+  },
+  "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender\\data\\Music-pattern-Analysis-main\\Music-pattern-Analysis-main\\LICENSE": {
+    "sha256": "74c8a0a416024469eaa0a98a19607ae8cff58cb543b6477295c1c5cb6f46fa62",
+    "size": 1069
+  },
+  "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender\\data\\Music-pattern-Analysis-main\\Music-pattern-Analysis-main\\music_pattern_analysis.ipynb": {
+    "sha256": "4903164e223558c9137e4a5117faa2968e5231e241fbc953aee2bd66cdbee3bb",
+    "size": 689611
+  },
+  "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender\\data\\Music-pattern-Analysis-main\\Music-pattern-Analysis-main\\music_pattern_dashboard.html": {
+    "sha256": "95ec6d25914b17b88bb3f650e0dd16937eb256c410d32a457bd3db0d1819afe1",
+    "size": 325891
+  },
+  "C:\\Users\\Htoo Myat Kyaw Lwin\\Desktop\\music-recommender\\data\\Music-pattern-Analysis-main\\Music-pattern-Analysis-main\\README.md": {
+    "sha256": "6f12b977a2918fa2a548ae99a90c2af0b328e478249d2b55d69935fa826652fe",
+    "size": 2471
+  }
+}

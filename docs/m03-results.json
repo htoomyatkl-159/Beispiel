@@ -1,0 +1,34 @@
+{
+  "milestone": "M03",
+  "date": "2026-10-29",
+  "tests": {
+    "passed": 50,
+    "failed": 0,
+    "files": 6,
+    "m02Regressions": 24,
+    "catalogChecks": 20,
+    "databasePathChecks": 6,
+    "durationSeconds": 2.64
+  },
+  "typecheck": "passed",
+  "build": "passed",
+  "prismaVersion": "7.10.1",
+  "publishedTracks": 40,
+  "catalogVersion": "catalog-v1-5b375897bac1e8f6dfa2",
+  "repeatImport": "same source/internal IDs; 40 tracks; one version record",
+  "realHttpChecks": [
+    "health 200",
+    "tracks 200 / total 40",
+    "Comedy title search",
+    "Hoshino artist search",
+    "detail 200",
+    "invalid limit 400",
+    "same ID after server restart"
+  ],
+  "protectedFilesChecked": 46,
+  "protectedFilesUnchanged": true,
+  "originalAndRecommenderFileSetsUnchanged": true,
+  "fixturesMatchM01Export": true,
+  "approvedPlansUnchanged": true,
+  "m04Started": false
+}
