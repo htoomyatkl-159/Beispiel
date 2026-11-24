@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { ApiError, catalog, duration, recommendations } from '../lib/api';
 import { EmptyState, ErrorState, LoadingState } from '../components/PageState';
 import { Button } from '../components/ui/button';
+import { FeedbackControls } from '../components/FeedbackControls';
 
 export function TrackDetail() {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ export function TrackDetail() {
     <Link className="text-action back-link" to="/search"><ArrowLeft size={17} />{t('backToCatalog')}</Link>
     <section className="detail-hero">
       <div className="detail-placeholder"><span className="eyebrow">{track.genre}</span><DiscoveryGlyph seed={track.sourceTrackId} /><span>{t('noArtwork')}</span></div>
-      <div className="detail-heading"><p className="eyebrow">{t('songDetails')}</p><h1>{track.title}</h1><p className="detail-artist">{t('by')} <Link to={`/search?${new URLSearchParams({ q: track.artistsText, type: 'artist' })}`}>{track.artistsText}</Link></p><div className="detail-tags"><span className="genre-pill">{track.genre}</span><span>{duration(track.durationMs)}</span>{track.explicit && <span className="explicit-marker">E</span>}</div><div className="detail-actions"><Link className="button-link button-primary" to={`/search?${new URLSearchParams({ q: track.artistsText, type: 'artist' })}`}>{t('exploreArtist')}<ArrowUpRight size={17} /></Link><Button variant="outline" onClick={() => void similar.refetch()} disabled={similar.isFetching}><Sparkle />{similar.isFetching ? t('findingSimilar') : t('findSimilar')}</Button></div></div>
+      <div className="detail-heading"><p className="eyebrow">{t('songDetails')}</p><h1>{track.title}</h1><p className="detail-artist">{t('by')} <Link to={`/search?${new URLSearchParams({ q: track.artistsText, type: 'artist' })}`}>{track.artistsText}</Link></p><div className="detail-tags"><span className="genre-pill">{track.genre}</span><span>{duration(track.durationMs)}</span>{track.explicit && <span className="explicit-marker">E</span>}</div><div className="detail-actions"><Link className="button-link button-primary" to={`/search?${new URLSearchParams({ q: track.artistsText, type: 'artist' })}`}>{t('exploreArtist')}<ArrowUpRight size={17} /></Link><Button variant="outline" onClick={() => void similar.refetch()} disabled={similar.isFetching}><Sparkle />{similar.isFetching ? t('findingSimilar') : t('findSimilar')}</Button><FeedbackControls trackId={track.id} /></div></div>
     </section>
     {similar.isError ? <ErrorState error={similar.error} retry={() => void similar.refetch()} /> : similar.data && (similar.data.data.length ? <section className="similar-panel"><div className="section-heading"><div><p className="eyebrow">{t('recommendationEyebrow')}</p><h2>{t('similarSongs')}</h2></div><span>{t('recommendationModel')}</span></div><div className="similar-grid">{similar.data.data.map((item) => <Link className="similar-card" to={`/tracks/${item.track.id}`} key={item.track.id}><DiscoveryGlyph seed={item.track.sourceTrackId} /><div><strong>{item.track.title}</strong><span>{item.track.artistsText}</span><small>{t('similarityScore', { score: Math.round(item.similarity * 100) })}</small></div></Link>)}</div></section> : <EmptyState />)}
     <div className="detail-content"><section className="metadata-panel"><h2>{t('songDetails')}</h2><dl>

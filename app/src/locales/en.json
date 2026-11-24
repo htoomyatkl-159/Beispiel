@@ -84,5 +84,5 @@
   "footer": "A little less scrolling. A little more discovery.",
   "footerNote": "Catalog metadata · no audio playback",
   "openSong": "View details for {{title}}",
-  "findSimilar": "Find similar songs", "findingSimilar": "Finding similar songs…", "similarSongs": "Similar songs", "recommendationEyebrow": "FROM BEISPIEL AI", "recommendationModel": "Content similarity", "similarityScore": "{{score}}% feature match"
+  "findSimilar": "Find similar songs", "findingSimilar": "Finding similar songs…", "similarSongs": "Similar songs", "recommendationEyebrow": "FROM BEISPIEL AI", "recommendationModel": "Content similarity", "similarityScore": "{{score}}% feature match", "signIn": "Sign in", "register": "Register", "signOut": "Sign out"
 }

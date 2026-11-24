@@ -1,0 +1,2 @@
+import { useNavigate } from 'react-router-dom'; import { useAuth } from '../auth/AuthProvider';
+export function Profile(){const {user,logout}=useAuth();const navigate=useNavigate();if(!user)return null;return <section className="auth-page"><div className="auth-card"><p className="eyebrow">Your account</p><h1>{user.displayName}</h1><p>{user.email}</p><button className="auth-submit" onClick={async()=>{await logout();navigate('/')}}>Sign out</button></div></section>}

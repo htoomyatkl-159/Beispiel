@@ -7,7 +7,7 @@ try {
   const config = readConfig();
   const database = createDatabase();
   await configureDatabase(database);
-  const app = createApp({ database, recommender: createRecommenderClient(config.recommenderBaseUrl, config.recommenderTimeoutMs) });
+  const app = createApp({ database, config, recommender: createRecommenderClient(config.recommenderBaseUrl, config.recommenderTimeoutMs) });
   app.set('env', config.nodeEnv);
   const server = app.listen(config.port, config.host, () => {
     const host = config.host.includes(':') ? `[${config.host}]` : config.host;

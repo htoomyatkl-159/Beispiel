@@ -1,10 +1,11 @@
 import type { SVGProps } from 'react';
 
-/** Original Beispiel monogram: connected B paths and a discovery spark. */
+/** Beispiel's waveform monogram: a musical signal flowing into a bold B. */
 export function BeispielMark(props: SVGProps<SVGSVGElement>) {
-  return <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" {...props}>
-    <path d="M11 8v32M11 8h13a8 8 0 0 1 0 16H11m0 0h16a8 8 0 0 1 0 16H11" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-    <path d="m38 4 2.2 4.8L45 11l-4.8 2.2L38 18l-2.2-4.8L31 11l4.8-2.2L38 4Z" fill="currentColor" />
+  return <svg viewBox="0 0 96 48" fill="none" aria-hidden="true" {...props}>
+    <defs><linearGradient id="beispiel-spectrum" x1="4" y1="24" x2="92" y2="24" gradientUnits="userSpaceOnUse"><stop stopColor="#54F7D5" /><stop offset=".28" stopColor="#1D9BFF" /><stop offset=".56" stopColor="#B13CFF" /><stop offset=".78" stopColor="#F4008A" /><stop offset="1" stopColor="#FFB52E" /></linearGradient></defs>
+    <path d="M4 27c7 0 7-13 13-13s6 17 13 17 7-26 14-26 7 36 14 36 7-31 14-31c5 0 7 10 10 10" stroke="url(#beispiel-spectrum)" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M57 8h17c11 0 17 5 17 12 0 5-3 8-8 10 6 2 9 6 9 11 0 7-6 12-18 12H57V8Zm10 8v10h7c4 0 7-2 7-5s-3-5-7-5h-7Zm0 18v11h8c5 0 8-2 8-6s-3-5-8-5h-8Z" fill="url(#beispiel-spectrum)" />
   </svg>;
 }
 

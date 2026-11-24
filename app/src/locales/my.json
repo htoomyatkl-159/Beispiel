@@ -84,5 +84,5 @@
   "footer": "ဂီတအသစ်တွေကို လွတ်လပ်စွာ ရှာဖွေပါ။",
   "footerNote": "သီချင်းအချက်အလက်သာ · အသံမပါ",
   "openSong": "{{title}} ၏ အချက်အလက်ကို ကြည့်ရန်",
-  "findSimilar": "ဆင်တူသီချင်းများရှာရန်", "findingSimilar": "ဆင်တူသီချင်းများရှာနေသည်…", "similarSongs": "ဆင်တူသီချင်းများ", "recommendationEyebrow": "BEISPIEL AI မှ", "recommendationModel": "အသံလက္ခဏာဆင်တူမှု", "similarityScore": "လက္ခဏာ {{score}}% ဆင်တူ"
+  "findSimilar": "ဆင်တူသီချင်းများရှာရန်", "findingSimilar": "ဆင်တူသီချင်းများရှာနေသည်…", "similarSongs": "ဆင်တူသီချင်းများ", "recommendationEyebrow": "BEISPIEL AI မှ", "recommendationModel": "အသံလက္ခဏာဆင်တူမှု", "similarityScore": "လက္ခဏာ {{score}}% ဆင်တူ", "signIn": "ဝင်မည်", "register": "စာရင်းသွင်းမည်", "signOut": "ထွက်မည်"
 }

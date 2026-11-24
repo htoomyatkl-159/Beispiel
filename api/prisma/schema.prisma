@@ -9,6 +9,20 @@ datasource db {
   provider = "sqlite"
 }
 
+model User {
+  id              String    @id @default(cuid())
+  email           String
+  normalizedEmail String    @unique
+  passwordHash    String
+  displayName     String
+  role            String    @default("USER")
+  status          String    @default("ACTIVE")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  lastLoginAt     DateTime?
+  feedback        TrackFeedback[]
+}
+
 model CatalogImport {
   catalogVersion  String   @id
   source          String
@@ -39,9 +53,23 @@ model Track {
   searchArtists  String
   createdAt      DateTime      @default(now())
   updatedAt      DateTime      @updatedAt
+  feedback       TrackFeedback[]
   catalogImport  CatalogImport @relation(fields: [catalogVersion], references: [catalogVersion], onDelete: Restrict)
 
   @@unique([source, sourceTrackId])
   @@index([status, searchTitle, id])
   @@index([catalogVersion])
+}
+
+model TrackFeedback {
+  id           String   @id @default(cuid())
+  userId       String
+  trackId      String
+  feedbackType String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  track        Track    @relation(fields: [trackId], references: [id], onDelete: Cascade)
+  @@unique([userId, trackId])
+  @@index([userId, feedbackType])
 }
