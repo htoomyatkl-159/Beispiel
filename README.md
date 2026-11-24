@@ -4,6 +4,8 @@
 
 Beispiel is a metadata-first music discovery application. It supports catalog search, explainable similar-song recommendations, authentication, per-user LIKE/DISLIKE feedback, and a For You experience built from real feedback and the existing Python cosine-similarity engine. It does not distribute copyrighted audio or provide full-song streaming.
 
+Its purpose is to help people who are unsure about their musical taste explore genres, artists, and musical characteristics until they discover what resonates with them.
+
 ## Run locally
 
 Start the private recommender, API, and web app in three PowerShell windows:
@@ -31,3 +33,11 @@ Run `npm test`, `npm run typecheck`, and `npm run build` in both `api` and `app`
 ## Limitations
 
 The development catalog contains 40 songs. For You aggregates Python recommendations from liked seed tracks; it is not collaborative filtering and does not claim to infer mood, popularity, or enjoyment probability. Audio playback, payments, mobile, OAuth, and refresh tokens are deferred.
+
+## Project documents
+
+- [Architecture](docs/ARCHITECTURE.md)
+- [Recommendation methodology](docs/RECOMMENDATION_SYSTEM.md)
+- [Data sources and licensing](docs/DATA_SOURCES.md)
+- [Deployment preparation](docs/DEPLOYMENT.md)
+- [Hackathon demo script](docs/DEMO_SCRIPT.md)

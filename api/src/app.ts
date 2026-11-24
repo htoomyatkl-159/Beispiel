@@ -15,6 +15,21 @@ export function createApp(options: { database?: PrismaClient; recommender?: Reco
   app.disable('x-powered-by');
   app.use(requestContext);
   app.use(express.json({ limit: '16kb' }));
+  if (options.config) {
+    app.use((req, res, next) => {
+      const origin = req.get('origin');
+      const allowedOrigin = options.config!.allowedFrontendOrigin;
+      if (origin === allowedOrigin) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+        res.setHeader('Access-Control-Allow-Credentials', 'true');
+        res.setHeader('Vary', 'Origin');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+      }
+      if (req.method === 'OPTIONS') return res.sendStatus(origin === allowedOrigin ? 204 : 403);
+      next();
+    });
+  }
 
   app.get('/api/v1/health/live', (_req, res) => {
     res.setHeader('Cache-Control', 'no-store');

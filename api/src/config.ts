@@ -2,7 +2,7 @@ import { isIP } from 'node:net';
 
 export type NodeEnvironment = 'development' | 'test' | 'production';
 export type JwtAlgorithm = 'HS256';
-export type AuthCookieSameSite = 'lax';
+export type AuthCookieSameSite = 'lax' | 'none';
 
 export interface ApiConfig {
   host: string;
@@ -71,7 +71,10 @@ export function readConfig(env: NodeJS.ProcessEnv = process.env): ApiConfig {
   const authCookieName = env.AUTH_COOKIE_NAME ?? 'beispiel_access';
   if (!/^[A-Za-z0-9_-]{1,64}$/.test(authCookieName)) throw new Error('AUTH_COOKIE_NAME must contain only letters, numbers, underscores, or hyphens.');
   const allowedFrontendOrigin = validateOrigin(env.ALLOWED_FRONTEND_ORIGIN ?? 'http://127.0.0.1:5173');
+  const authCookieSameSite = (env.AUTH_COOKIE_SAMESITE ?? 'lax').toLowerCase();
+  if (authCookieSameSite !== 'lax' && authCookieSameSite !== 'none') throw new Error('AUTH_COOKIE_SAMESITE must be lax or none.');
+  if (nodeEnv === 'production' && authCookieSameSite === 'none' && !configuredSecret) throw new Error('Production cookie configuration is invalid.');
   return { host, port, nodeEnv, recommenderBaseUrl, recommenderTimeoutMs, jwtSecret, jwtIssuer, jwtAudience,
     jwtAlgorithm, accessTokenLifetimeSeconds, authCookieName, allowedFrontendOrigin,
-    authCookieHttpOnly: true, authCookieSecure: nodeEnv === 'production', authCookieSameSite: 'lax' };
+    authCookieHttpOnly: true, authCookieSecure: nodeEnv === 'production', authCookieSameSite };
 }

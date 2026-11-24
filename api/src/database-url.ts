@@ -13,8 +13,9 @@ export function resolveDatabaseUrl(value = process.env.DATABASE_URL ?? 'file:./p
   if (!filename.trim()) throw new Error('DATABASE_URL must name a file.');
   const absolute = path.resolve(API_ROOT, filename);
   const relative = path.relative(API_ROOT, absolute);
-  if (!relative || relative.startsWith('..') || path.isAbsolute(relative)) {
+  const productionVolumePath = process.env.NODE_ENV === 'production' && path.posix.normalize(filename.replaceAll('\\', '/')).startsWith('/data/');
+  if ((!relative || relative.startsWith('..') || path.isAbsolute(relative)) && !productionVolumePath) {
     throw new Error('For this milestone the SQLite file must stay inside the API project.');
   }
-  return `file:${absolute.replaceAll('\\', '/')}`;
+  return `file:${productionVolumePath ? path.posix.normalize(filename.replaceAll('\\', '/')) : absolute.replaceAll('\\', '/')}`;
 }

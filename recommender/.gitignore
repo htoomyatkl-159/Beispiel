@@ -12,3 +12,5 @@ artifacts/tiny/*
 !artifacts/tiny/current.json
 !artifacts/tiny/cosine-v1-*/
 artifacts/tiny/cosine-v1-*/*
+!artifacts/tiny/cosine-v1-*/
+!artifacts/tiny/cosine-v1-*/*

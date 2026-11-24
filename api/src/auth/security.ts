@@ -33,7 +33,7 @@ export function readAuthCookie(req: Request, config: ApiConfig): string | undefi
 }
 
 function cookieValue(value: string): string { return encodeURIComponent(value); }
-function sameSite(_value: ApiConfig['authCookieSameSite']): string { return 'Lax'; }
+function sameSite(value: ApiConfig['authCookieSameSite']): string { return value === 'none' ? 'None' : 'Lax'; }
 
 export function setAuthCookie(res: Response, token: string, config: ApiConfig): void {
   const secure = config.authCookieSecure ? '; Secure' : '';
