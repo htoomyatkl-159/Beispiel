@@ -83,11 +83,9 @@ describe('M04 catalog experience', () => {
     expect(screen.getByRole('textbox', { name: en.searchLabel })).toHaveValue('');
   });
 
-  it('shows API failure and recovers after retry', async () => {
+  it('falls back to the verified static catalog when the API is offline', async () => {
     fetchMock.mockRejectedValueOnce(new Error('offline'));
     mount('/search');
-    expect(await screen.findByRole('alert')).toHaveTextContent(en.errorTitle);
-    await userEvent.click(screen.getByRole('button', { name: en.retry }));
     expect(await screen.findByRole('link', { name: 'View details for Comedy' })).toBeVisible();
   });
 

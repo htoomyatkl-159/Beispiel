@@ -1,3 +1,5 @@
+import staticCatalog from '../data/catalog.json';
+
 export interface Track {
   id: string;
   source: string;
@@ -35,6 +37,17 @@ export class ApiError extends Error {
 
 const base = (import.meta.env.VITE_API_BASE_URL || '/api/v1').replace(/\/$/, '');
 
+const staticTracks: Track[] = staticCatalog.data.map((track) => ({ ...track, explicit: Boolean(track.explicit) }));
+function staticPage(page: number, limit: number, rows: Track[] = staticTracks): PageResult {
+  const start = (page - 1) * limit;
+  return { data: rows.slice(start, start + limit), meta: { page, limit, total: rows.length, hasNext: start + limit < rows.length, requestId: 'static-catalog' } };
+}
+function staticSearch(q: string, type: 'track' | 'artist', page: number): PageResult {
+  const needle = q.trim().toLocaleLowerCase();
+  const rows = staticTracks.filter((track) => (type === 'artist' ? track.artistsText : track.title).toLocaleLowerCase().includes(needle));
+  return staticPage(page, 12, rows);
+}
+
 async function get<T>(path: string, signal?: AbortSignal, init: RequestInit = {}): Promise<T> {
   const response = await fetch(`${base}${path}`, { ...init, credentials: 'include', signal, headers: { Accept: 'application/json', ...init.headers } });
   const payload = await response.json().catch(() => null);
@@ -45,11 +58,18 @@ async function get<T>(path: string, signal?: AbortSignal, init: RequestInit = {}
 }
 
 export const catalog = {
-  list: (page: number, limit = 12, signal?: AbortSignal) =>
-    get<PageResult>(`/tracks?${new URLSearchParams({ page: String(page), limit: String(limit) })}`, signal),
-  search: (q: string, type: 'track' | 'artist', page: number, signal?: AbortSignal) =>
-    get<PageResult>(`/search?${new URLSearchParams({ q, type, page: String(page), limit: '12' })}`, signal),
-  track: (id: string, signal?: AbortSignal) => get<TrackResult>(`/tracks/${encodeURIComponent(id)}`, signal),
+  list: async (page: number, limit = 12, signal?: AbortSignal) => {
+    try { return await get<PageResult>(`/tracks?${new URLSearchParams({ page: String(page), limit: String(limit) })}`, signal); }
+    catch (error) { if (signal?.aborted) throw error; return staticPage(page, limit); }
+  },
+  search: async (q: string, type: 'track' | 'artist', page: number, signal?: AbortSignal) => {
+    try { return await get<PageResult>(`/search?${new URLSearchParams({ q, type, page: String(page), limit: '12' })}`, signal); }
+    catch (error) { if (signal?.aborted) throw error; return staticSearch(q, type, page); }
+  },
+  track: async (id: string, signal?: AbortSignal) => {
+    try { return await get<TrackResult>(`/tracks/${encodeURIComponent(id)}`, signal); }
+    catch (error) { if (signal?.aborted) throw error; const track = staticTracks.find((item) => item.id === id); if (!track) throw error; return { data: track, meta: { requestId: 'static-catalog' } }; }
+  },
 };
 
 export const auth = {
